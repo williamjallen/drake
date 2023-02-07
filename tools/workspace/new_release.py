@@ -80,6 +80,8 @@ _OVERLOOK_RELEASE_REPOSITORIES = {
 
 # Packages in these cohorts should be upgraded together (in a single commit).
 _COHORTS = (
+    # mypy uses mypy_extensions; be sure to keep them aligned.
+    {"mypy_internal", "mypy_extensions_internal"},
     # sdformat depends on both gz libraries; be sure to keep them aligned.
     {"sdformat_internal", "gz_math_internal", "gz_utils_internal"},
     # uwebsockets depends on usockets; be sure to keep them aligned.
